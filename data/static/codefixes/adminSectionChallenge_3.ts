@@ -1,8 +1,11 @@
 const routes: Routes = [
   {
-    path: (function(){var t=Array.prototype.slice.call(arguments),G=t.shift();return t.reverse().map(function(e,w){return String.fromCharCode(e-G-2-w)}).join('')})(55,167,171,165,168,158,154)+(62749278960).toString(36).toLowerCase()+(function(){var b=Array.prototype.slice.call(arguments),V=b.shift();return b.reverse().map(function(l,S){return String.fromCharCode(l-V-43-S)}).join('')})(58,211),
-    component: AdministrationComponent,
-    canActivate: [AdminGuard]
+    path: (function(){
+  const t = Array.prototype.slice.call(arguments); // use const (not reassigned)
+  const G = t.shift();                             // use const (not reassigned)
+  return t.reverse().map((e,w) => String.fromCharCode(e-G-2-w)).join('');
+})(55,167,171,165,168,158,154) + ...
+
   },
   {
     path: 'accounting',
